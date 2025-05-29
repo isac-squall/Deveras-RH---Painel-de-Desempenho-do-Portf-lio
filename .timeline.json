@@ -1,5 +1,5 @@
 {
-  "timeline_index": 23,
+  "timeline_index": 25,
   "planner": {
     "Team Leader": {
       "1": {
@@ -71,19 +71,23 @@
     "20": 0,
     "21": 1,
     "22": 0,
-    "23": 1
+    "23": 1,
+    "24": 0,
+    "25": 1
   },
   "preview_servers": {
-    "bd51be58-3889-450f-9b92-ff5280109f4b": {
+    "d37d2737-ae3e-4807-8e08-11c37acaf95d": {
       "role": "Alex",
-      "port": 8501,
-      "subdomain": "deveras-portfolio-dashboard-4gv9y-igk4wd-109f4b",
-      "server": "049b91d7-51c7-4f1a-b3e9-d8f5f9234b88",
-      "cmd": "cd /data/chats/igk4wd/workspace/streamlit_template && pip install -r requirements.txt && streamlit run app.py",
-      "timeline_index": 22,
+      "port": 8502,
+      "subdomain": "deveras-portfolio-dashboard-dxmig8-4gv9y-igk4wd-caf95d",
+      "server": "0ea1f95c-d245-4da8-a6d3-32cde447cf31",
+      "cmd": "cd /data/chats/igk4wd/workspace/streamlit_template && pip install -r requirements.txt && streamlit run app.py --server.port=8502",
+      "timeline_index": 24,
       "status": "success",
       "logs": []
     }
   },
-  "deploy": {}
+  "deploy": {
+    "proj_name": "deveras-portfolio-dashboard-dxmig8"
+  }
 }
