@@ -70,8 +70,8 @@
                             "cause_by": "metagpt.actions.di.run_command.RunCommand",
                             "sent_from": "Mike",
                             "send_to": [
-                                "<all>",
-                                "David"
+                                "David",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -173,6 +173,33 @@
                             "instruct_content": null,
                             "role": "assistant",
                             "cause_by": "metagpt.actions.di.run_command.RunCommand",
+                            "sent_from": "Alex",
+                            "send_to": [
+                                "<all>"
+                            ],
+                            "metadata": {
+                                "agent": "Alex(Engineer)"
+                            }
+                        },
+                        {
+                            "id": "c09ecbbc9d304bf5bb32ad01b6c481b0",
+                            "content": "[Message] from User to Alex: @Alex  continue with your work",
+                            "instruct_content": null,
+                            "role": "user",
+                            "cause_by": "metagpt.actions.add_requirement.UserRequirement",
+                            "sent_from": "",
+                            "send_to": [
+                                "Alex",
+                                "<all>"
+                            ],
+                            "metadata": {}
+                        },
+                        {
+                            "id": "997e0ca73b7e41c09bc73e03f7c02411",
+                            "content": "[Message] from Alex(Engineer) to Mike: I'll help you with further improvements to the Deveras RH dashboard. Let me first take a look at the current setup and preview the dashboard:\n\n```json\n[\n    {\n        \"command_name\": \"Terminal.preview\",\n        \"args\": {\n            \"tab_id\": \"01\",\n            \"port\": 8502,\n            \"proj_name\": \"deveras-portfolio-dashboard-dxmig8\"\n        }\n    }\n]\n```",
+                            "instruct_content": null,
+                            "role": "assistant",
+                            "cause_by": "QuickThink",
                             "sent_from": "Alex",
                             "send_to": [
                                 "<all>"
@@ -246,6 +273,19 @@
                                     "<all>"
                                 ],
                                 "metadata": {}
+                            },
+                            {
+                                "id": "c09ecbbc9d304bf5bb32ad01b6c481b0",
+                                "content": "[Message] from User to Alex: @Alex  continue with your work",
+                                "instruct_content": null,
+                                "role": "user",
+                                "cause_by": "metagpt.actions.add_requirement.UserRequirement",
+                                "sent_from": "",
+                                "send_to": [
+                                    "Alex",
+                                    "<all>"
+                                ],
+                                "metadata": {}
                             }
                         ],
                         "metagpt.actions.di.run_command.RunCommand": [
@@ -269,8 +309,8 @@
                                 "cause_by": "metagpt.actions.di.run_command.RunCommand",
                                 "sent_from": "Mike",
                                 "send_to": [
-                                    "<all>",
-                                    "David"
+                                    "David",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -342,6 +382,22 @@
                                     "agent": "Alex(Engineer)"
                                 }
                             }
+                        ],
+                        "QuickThink": [
+                            {
+                                "id": "997e0ca73b7e41c09bc73e03f7c02411",
+                                "content": "[Message] from Alex(Engineer) to Mike: I'll help you with further improvements to the Deveras RH dashboard. Let me first take a look at the current setup and preview the dashboard:\n\n```json\n[\n    {\n        \"command_name\": \"Terminal.preview\",\n        \"args\": {\n            \"tab_id\": \"01\",\n            \"port\": 8502,\n            \"proj_name\": \"deveras-portfolio-dashboard-dxmig8\"\n        }\n    }\n]\n```",
+                                "instruct_content": null,
+                                "role": "assistant",
+                                "cause_by": "QuickThink",
+                                "sent_from": "Alex",
+                                "send_to": [
+                                    "<all>"
+                                ],
+                                "metadata": {
+                                    "agent": "Alex(Engineer)"
+                                }
+                            }
                         ]
                     },
                     "ignore_id": false,
@@ -391,8 +447,8 @@
                             "cause_by": "metagpt.actions.di.run_command.RunCommand",
                             "sent_from": "Mike",
                             "send_to": [
-                                "<all>",
-                                "David"
+                                "David",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -494,6 +550,33 @@
                             "instruct_content": null,
                             "role": "assistant",
                             "cause_by": "metagpt.actions.di.run_command.RunCommand",
+                            "sent_from": "Alex",
+                            "send_to": [
+                                "<all>"
+                            ],
+                            "metadata": {
+                                "agent": "Alex(Engineer)"
+                            }
+                        },
+                        {
+                            "id": "c09ecbbc9d304bf5bb32ad01b6c481b0",
+                            "content": "[Message] from User to Alex: @Alex  continue with your work",
+                            "instruct_content": null,
+                            "role": "user",
+                            "cause_by": "metagpt.actions.add_requirement.UserRequirement",
+                            "sent_from": "",
+                            "send_to": [
+                                "Alex",
+                                "<all>"
+                            ],
+                            "metadata": {}
+                        },
+                        {
+                            "id": "997e0ca73b7e41c09bc73e03f7c02411",
+                            "content": "[Message] from Alex(Engineer) to Mike: I'll help you with further improvements to the Deveras RH dashboard. Let me first take a look at the current setup and preview the dashboard:\n\n```json\n[\n    {\n        \"command_name\": \"Terminal.preview\",\n        \"args\": {\n            \"tab_id\": \"01\",\n            \"port\": 8502,\n            \"proj_name\": \"deveras-portfolio-dashboard-dxmig8\"\n        }\n    }\n]\n```",
+                            "instruct_content": null,
+                            "role": "assistant",
+                            "cause_by": "QuickThink",
                             "sent_from": "Alex",
                             "send_to": [
                                 "<all>"
@@ -735,8 +818,8 @@
                             "cause_by": "metagpt.actions.di.run_command.RunCommand",
                             "sent_from": "Mike",
                             "send_to": [
-                                "<all>",
-                                "David"
+                                "David",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -821,6 +904,33 @@
                             "metadata": {
                                 "agent": "Alex(Engineer)"
                             }
+                        },
+                        {
+                            "id": "c09ecbbc9d304bf5bb32ad01b6c481b0",
+                            "content": "[Message] from User to Alex: @Alex  continue with your work",
+                            "instruct_content": null,
+                            "role": "user",
+                            "cause_by": "metagpt.actions.add_requirement.UserRequirement",
+                            "sent_from": "",
+                            "send_to": [
+                                "Alex",
+                                "<all>"
+                            ],
+                            "metadata": {}
+                        },
+                        {
+                            "id": "997e0ca73b7e41c09bc73e03f7c02411",
+                            "content": "[Message] from Alex(Engineer) to Mike: I'll help you with further improvements to the Deveras RH dashboard. Let me first take a look at the current setup and preview the dashboard:\n\n```json\n[\n    {\n        \"command_name\": \"Terminal.preview\",\n        \"args\": {\n            \"tab_id\": \"01\",\n            \"port\": 8502,\n            \"proj_name\": \"deveras-portfolio-dashboard-dxmig8\"\n        }\n    }\n]\n```",
+                            "instruct_content": null,
+                            "role": "assistant",
+                            "cause_by": "QuickThink",
+                            "sent_from": "Alex",
+                            "send_to": [
+                                "<all>"
+                            ],
+                            "metadata": {
+                                "agent": "Alex(Engineer)"
+                            }
                         }
                     ],
                     "index": {
@@ -863,6 +973,19 @@
                                     "<all>"
                                 ],
                                 "metadata": {}
+                            },
+                            {
+                                "id": "c09ecbbc9d304bf5bb32ad01b6c481b0",
+                                "content": "[Message] from User to Alex: @Alex  continue with your work",
+                                "instruct_content": null,
+                                "role": "user",
+                                "cause_by": "metagpt.actions.add_requirement.UserRequirement",
+                                "sent_from": "",
+                                "send_to": [
+                                    "Alex",
+                                    "<all>"
+                                ],
+                                "metadata": {}
                             }
                         ],
                         "metagpt.actions.di.run_command.RunCommand": [
@@ -874,8 +997,8 @@
                                 "cause_by": "metagpt.actions.di.run_command.RunCommand",
                                 "sent_from": "Mike",
                                 "send_to": [
-                                    "<all>",
-                                    "David"
+                                    "David",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -935,6 +1058,22 @@
                                     "agent": "Alex(Engineer)"
                                 }
                             }
+                        ],
+                        "QuickThink": [
+                            {
+                                "id": "997e0ca73b7e41c09bc73e03f7c02411",
+                                "content": "[Message] from Alex(Engineer) to Mike: I'll help you with further improvements to the Deveras RH dashboard. Let me first take a look at the current setup and preview the dashboard:\n\n```json\n[\n    {\n        \"command_name\": \"Terminal.preview\",\n        \"args\": {\n            \"tab_id\": \"01\",\n            \"port\": 8502,\n            \"proj_name\": \"deveras-portfolio-dashboard-dxmig8\"\n        }\n    }\n]\n```",
+                                "instruct_content": null,
+                                "role": "assistant",
+                                "cause_by": "QuickThink",
+                                "sent_from": "Alex",
+                                "send_to": [
+                                    "<all>"
+                                ],
+                                "metadata": {
+                                    "agent": "Alex(Engineer)"
+                                }
+                            }
                         ]
                     },
                     "ignore_id": false,
@@ -960,8 +1099,8 @@
                             "cause_by": "metagpt.actions.di.run_command.RunCommand",
                             "sent_from": "Mike",
                             "send_to": [
-                                "<all>",
-                                "David"
+                                "David",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -1046,6 +1185,33 @@
                             "metadata": {
                                 "agent": "Alex(Engineer)"
                             }
+                        },
+                        {
+                            "id": "c09ecbbc9d304bf5bb32ad01b6c481b0",
+                            "content": "[Message] from User to Alex: @Alex  continue with your work",
+                            "instruct_content": null,
+                            "role": "user",
+                            "cause_by": "metagpt.actions.add_requirement.UserRequirement",
+                            "sent_from": "",
+                            "send_to": [
+                                "Alex",
+                                "<all>"
+                            ],
+                            "metadata": {}
+                        },
+                        {
+                            "id": "997e0ca73b7e41c09bc73e03f7c02411",
+                            "content": "[Message] from Alex(Engineer) to Mike: I'll help you with further improvements to the Deveras RH dashboard. Let me first take a look at the current setup and preview the dashboard:\n\n```json\n[\n    {\n        \"command_name\": \"Terminal.preview\",\n        \"args\": {\n            \"tab_id\": \"01\",\n            \"port\": 8502,\n            \"proj_name\": \"deveras-portfolio-dashboard-dxmig8\"\n        }\n    }\n]\n```",
+                            "instruct_content": null,
+                            "role": "assistant",
+                            "cause_by": "QuickThink",
+                            "sent_from": "Alex",
+                            "send_to": [
+                                "<all>"
+                            ],
+                            "metadata": {
+                                "agent": "Alex(Engineer)"
+                            }
                         }
                     ],
                     "memory_k": 30,
@@ -1064,8 +1230,8 @@
                 "max_react_loop": 50
             },
             "addresses": [
-                "Emma",
-                "metagpt.roles.product_manager.ProductManager"
+                "metagpt.roles.product_manager.ProductManager",
+                "Emma"
             ],
             "planner": {
                 "plan": {
@@ -1281,8 +1447,8 @@
                             "cause_by": "metagpt.actions.di.run_command.RunCommand",
                             "sent_from": "Mike",
                             "send_to": [
-                                "<all>",
-                                "David"
+                                "David",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -1367,6 +1533,33 @@
                             "metadata": {
                                 "agent": "Alex(Engineer)"
                             }
+                        },
+                        {
+                            "id": "c09ecbbc9d304bf5bb32ad01b6c481b0",
+                            "content": "[Message] from User to Alex: @Alex  continue with your work",
+                            "instruct_content": null,
+                            "role": "user",
+                            "cause_by": "metagpt.actions.add_requirement.UserRequirement",
+                            "sent_from": "",
+                            "send_to": [
+                                "Alex",
+                                "<all>"
+                            ],
+                            "metadata": {}
+                        },
+                        {
+                            "id": "997e0ca73b7e41c09bc73e03f7c02411",
+                            "content": "[Message] from Alex(Engineer) to Mike: I'll help you with further improvements to the Deveras RH dashboard. Let me first take a look at the current setup and preview the dashboard:\n\n```json\n[\n    {\n        \"command_name\": \"Terminal.preview\",\n        \"args\": {\n            \"tab_id\": \"01\",\n            \"port\": 8502,\n            \"proj_name\": \"deveras-portfolio-dashboard-dxmig8\"\n        }\n    }\n]\n```",
+                            "instruct_content": null,
+                            "role": "assistant",
+                            "cause_by": "QuickThink",
+                            "sent_from": "Alex",
+                            "send_to": [
+                                "<all>"
+                            ],
+                            "metadata": {
+                                "agent": "Alex(Engineer)"
+                            }
                         }
                     ],
                     "index": {
@@ -1409,6 +1602,19 @@
                                     "<all>"
                                 ],
                                 "metadata": {}
+                            },
+                            {
+                                "id": "c09ecbbc9d304bf5bb32ad01b6c481b0",
+                                "content": "[Message] from User to Alex: @Alex  continue with your work",
+                                "instruct_content": null,
+                                "role": "user",
+                                "cause_by": "metagpt.actions.add_requirement.UserRequirement",
+                                "sent_from": "",
+                                "send_to": [
+                                    "Alex",
+                                    "<all>"
+                                ],
+                                "metadata": {}
                             }
                         ],
                         "metagpt.actions.di.run_command.RunCommand": [
@@ -1420,8 +1626,8 @@
                                 "cause_by": "metagpt.actions.di.run_command.RunCommand",
                                 "sent_from": "Mike",
                                 "send_to": [
-                                    "<all>",
-                                    "David"
+                                    "David",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -1481,6 +1687,22 @@
                                     "agent": "Alex(Engineer)"
                                 }
                             }
+                        ],
+                        "QuickThink": [
+                            {
+                                "id": "997e0ca73b7e41c09bc73e03f7c02411",
+                                "content": "[Message] from Alex(Engineer) to Mike: I'll help you with further improvements to the Deveras RH dashboard. Let me first take a look at the current setup and preview the dashboard:\n\n```json\n[\n    {\n        \"command_name\": \"Terminal.preview\",\n        \"args\": {\n            \"tab_id\": \"01\",\n            \"port\": 8502,\n            \"proj_name\": \"deveras-portfolio-dashboard-dxmig8\"\n        }\n    }\n]\n```",
+                                "instruct_content": null,
+                                "role": "assistant",
+                                "cause_by": "QuickThink",
+                                "sent_from": "Alex",
+                                "send_to": [
+                                    "<all>"
+                                ],
+                                "metadata": {
+                                    "agent": "Alex(Engineer)"
+                                }
+                            }
                         ]
                     },
                     "ignore_id": false,
@@ -1506,8 +1728,8 @@
                             "cause_by": "metagpt.actions.di.run_command.RunCommand",
                             "sent_from": "Mike",
                             "send_to": [
-                                "<all>",
-                                "David"
+                                "David",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -1592,6 +1814,33 @@
                             "metadata": {
                                 "agent": "Alex(Engineer)"
                             }
+                        },
+                        {
+                            "id": "c09ecbbc9d304bf5bb32ad01b6c481b0",
+                            "content": "[Message] from User to Alex: @Alex  continue with your work",
+                            "instruct_content": null,
+                            "role": "user",
+                            "cause_by": "metagpt.actions.add_requirement.UserRequirement",
+                            "sent_from": "",
+                            "send_to": [
+                                "Alex",
+                                "<all>"
+                            ],
+                            "metadata": {}
+                        },
+                        {
+                            "id": "997e0ca73b7e41c09bc73e03f7c02411",
+                            "content": "[Message] from Alex(Engineer) to Mike: I'll help you with further improvements to the Deveras RH dashboard. Let me first take a look at the current setup and preview the dashboard:\n\n```json\n[\n    {\n        \"command_name\": \"Terminal.preview\",\n        \"args\": {\n            \"tab_id\": \"01\",\n            \"port\": 8502,\n            \"proj_name\": \"deveras-portfolio-dashboard-dxmig8\"\n        }\n    }\n]\n```",
+                            "instruct_content": null,
+                            "role": "assistant",
+                            "cause_by": "QuickThink",
+                            "sent_from": "Alex",
+                            "send_to": [
+                                "<all>"
+                            ],
+                            "metadata": {
+                                "agent": "Alex(Engineer)"
+                            }
                         }
                     ],
                     "memory_k": 30,
@@ -1612,8 +1861,8 @@
                 "max_react_loop": 50
             },
             "addresses": [
-                "Bob",
-                "metagpt.roles.architect.Architect"
+                "metagpt.roles.architect.Architect",
+                "Bob"
             ],
             "planner": {
                 "plan": {
@@ -1802,8 +2051,8 @@
                             "cause_by": "metagpt.actions.di.run_command.RunCommand",
                             "sent_from": "Mike",
                             "send_to": [
-                                "<all>",
-                                "David"
+                                "David",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -2356,6 +2605,45 @@
                             "metadata": {
                                 "agent": "Alex(Engineer)"
                             }
+                        },
+                        {
+                            "id": "c09ecbbc9d304bf5bb32ad01b6c481b0",
+                            "content": "[Message] from User to Alex: @Alex  continue with your work",
+                            "instruct_content": null,
+                            "role": "user",
+                            "cause_by": "metagpt.actions.add_requirement.UserRequirement",
+                            "sent_from": "",
+                            "send_to": [
+                                "Alex",
+                                "<all>"
+                            ],
+                            "metadata": {}
+                        },
+                        {
+                            "id": "c4ca5185bd4d416bbb5a35f0b705bc15",
+                            "content": "I'll help you with further improvements to the Deveras RH dashboard. Let me first take a look at the current setup and preview the dashboard:\n\n```json\n[\n    {\n        \"command_name\": \"Terminal.preview\",\n        \"args\": {\n            \"tab_id\": \"01\",\n            \"port\": 8502,\n            \"proj_name\": \"deveras-portfolio-dashboard-dxmig8\"\n        }\n    }\n]\n```",
+                            "instruct_content": null,
+                            "role": "assistant",
+                            "cause_by": "QuickThink",
+                            "sent_from": "",
+                            "send_to": [
+                                "<all>"
+                            ],
+                            "metadata": {}
+                        },
+                        {
+                            "id": "997e0ca73b7e41c09bc73e03f7c02411",
+                            "content": "[Message] from Alex(Engineer) to Mike: I'll help you with further improvements to the Deveras RH dashboard. Let me first take a look at the current setup and preview the dashboard:\n\n```json\n[\n    {\n        \"command_name\": \"Terminal.preview\",\n        \"args\": {\n            \"tab_id\": \"01\",\n            \"port\": 8502,\n            \"proj_name\": \"deveras-portfolio-dashboard-dxmig8\"\n        }\n    }\n]\n```",
+                            "instruct_content": null,
+                            "role": "assistant",
+                            "cause_by": "QuickThink",
+                            "sent_from": "Alex",
+                            "send_to": [
+                                "<all>"
+                            ],
+                            "metadata": {
+                                "agent": "Alex(Engineer)"
+                            }
                         }
                     ],
                     "index": {
@@ -2626,6 +2914,19 @@
                                     "<all>"
                                 ],
                                 "metadata": {}
+                            },
+                            {
+                                "id": "c09ecbbc9d304bf5bb32ad01b6c481b0",
+                                "content": "[Message] from User to Alex: @Alex  continue with your work",
+                                "instruct_content": null,
+                                "role": "user",
+                                "cause_by": "metagpt.actions.add_requirement.UserRequirement",
+                                "sent_from": "",
+                                "send_to": [
+                                    "Alex",
+                                    "<all>"
+                                ],
+                                "metadata": {}
                             }
                         ],
                         "metagpt.actions.di.run_command.RunCommand": [
@@ -2637,8 +2938,8 @@
                                 "cause_by": "metagpt.actions.di.run_command.RunCommand",
                                 "sent_from": "Mike",
                                 "send_to": [
-                                    "<all>",
-                                    "David"
+                                    "David",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -2939,6 +3240,34 @@
                                     "<all>"
                                 ],
                                 "metadata": {}
+                            }
+                        ],
+                        "QuickThink": [
+                            {
+                                "id": "c4ca5185bd4d416bbb5a35f0b705bc15",
+                                "content": "I'll help you with further improvements to the Deveras RH dashboard. Let me first take a look at the current setup and preview the dashboard:\n\n```json\n[\n    {\n        \"command_name\": \"Terminal.preview\",\n        \"args\": {\n            \"tab_id\": \"01\",\n            \"port\": 8502,\n            \"proj_name\": \"deveras-portfolio-dashboard-dxmig8\"\n        }\n    }\n]\n```",
+                                "instruct_content": null,
+                                "role": "assistant",
+                                "cause_by": "QuickThink",
+                                "sent_from": "",
+                                "send_to": [
+                                    "<all>"
+                                ],
+                                "metadata": {}
+                            },
+                            {
+                                "id": "997e0ca73b7e41c09bc73e03f7c02411",
+                                "content": "[Message] from Alex(Engineer) to Mike: I'll help you with further improvements to the Deveras RH dashboard. Let me first take a look at the current setup and preview the dashboard:\n\n```json\n[\n    {\n        \"command_name\": \"Terminal.preview\",\n        \"args\": {\n            \"tab_id\": \"01\",\n            \"port\": 8502,\n            \"proj_name\": \"deveras-portfolio-dashboard-dxmig8\"\n        }\n    }\n]\n```",
+                                "instruct_content": null,
+                                "role": "assistant",
+                                "cause_by": "QuickThink",
+                                "sent_from": "Alex",
+                                "send_to": [
+                                    "<all>"
+                                ],
+                                "metadata": {
+                                    "agent": "Alex(Engineer)"
+                                }
                             }
                         ]
                     },
@@ -3333,6 +3662,45 @@
                             "metadata": {
                                 "agent": "Alex(Engineer)"
                             }
+                        },
+                        {
+                            "id": "c09ecbbc9d304bf5bb32ad01b6c481b0",
+                            "content": "[Message] from User to Alex: @Alex  continue with your work",
+                            "instruct_content": null,
+                            "role": "user",
+                            "cause_by": "metagpt.actions.add_requirement.UserRequirement",
+                            "sent_from": "",
+                            "send_to": [
+                                "Alex",
+                                "<all>"
+                            ],
+                            "metadata": {}
+                        },
+                        {
+                            "id": "c4ca5185bd4d416bbb5a35f0b705bc15",
+                            "content": "I'll help you with further improvements to the Deveras RH dashboard. Let me first take a look at the current setup and preview the dashboard:\n\n```json\n[\n    {\n        \"command_name\": \"Terminal.preview\",\n        \"args\": {\n            \"tab_id\": \"01\",\n            \"port\": 8502,\n            \"proj_name\": \"deveras-portfolio-dashboard-dxmig8\"\n        }\n    }\n]\n```",
+                            "instruct_content": null,
+                            "role": "assistant",
+                            "cause_by": "QuickThink",
+                            "sent_from": "",
+                            "send_to": [
+                                "<all>"
+                            ],
+                            "metadata": {}
+                        },
+                        {
+                            "id": "997e0ca73b7e41c09bc73e03f7c02411",
+                            "content": "[Message] from Alex(Engineer) to Mike: I'll help you with further improvements to the Deveras RH dashboard. Let me first take a look at the current setup and preview the dashboard:\n\n```json\n[\n    {\n        \"command_name\": \"Terminal.preview\",\n        \"args\": {\n            \"tab_id\": \"01\",\n            \"port\": 8502,\n            \"proj_name\": \"deveras-portfolio-dashboard-dxmig8\"\n        }\n    }\n]\n```",
+                            "instruct_content": null,
+                            "role": "assistant",
+                            "cause_by": "QuickThink",
+                            "sent_from": "Alex",
+                            "send_to": [
+                                "<all>"
+                            ],
+                            "metadata": {
+                                "agent": "Alex(Engineer)"
+                            }
                         }
                     ],
                     "memory_k": 30,
@@ -3362,12 +3730,12 @@
                 "max_react_loop": 40
             },
             "addresses": [
-                "metagpt.roles.di.frontend_engineer.FrontendEngineer",
-                "Alex"
+                "Alex",
+                "metagpt.roles.di.frontend_engineer.FrontendEngineer"
             ],
             "planner": {
                 "plan": {
-                    "goal": "[Message] from User to Alex: @Alex I have confirmed on the page. Please deploy this project to public with the `project_name` 'deveras-portfolio-dashboard-dxmig8'.",
+                    "goal": "",
                     "context": "",
                     "tasks": [],
                     "task_map": {},
@@ -3794,8 +4162,8 @@
                             "cause_by": "metagpt.actions.di.run_command.RunCommand",
                             "sent_from": "Mike",
                             "send_to": [
-                                "<all>",
-                                "David"
+                                "David",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -4168,6 +4536,33 @@
                             "metadata": {
                                 "agent": "Alex(Engineer)"
                             }
+                        },
+                        {
+                            "id": "c09ecbbc9d304bf5bb32ad01b6c481b0",
+                            "content": "[Message] from User to Alex: @Alex  continue with your work",
+                            "instruct_content": null,
+                            "role": "user",
+                            "cause_by": "metagpt.actions.add_requirement.UserRequirement",
+                            "sent_from": "",
+                            "send_to": [
+                                "Alex",
+                                "<all>"
+                            ],
+                            "metadata": {}
+                        },
+                        {
+                            "id": "997e0ca73b7e41c09bc73e03f7c02411",
+                            "content": "[Message] from Alex(Engineer) to Mike: I'll help you with further improvements to the Deveras RH dashboard. Let me first take a look at the current setup and preview the dashboard:\n\n```json\n[\n    {\n        \"command_name\": \"Terminal.preview\",\n        \"args\": {\n            \"tab_id\": \"01\",\n            \"port\": 8502,\n            \"proj_name\": \"deveras-portfolio-dashboard-dxmig8\"\n        }\n    }\n]\n```",
+                            "instruct_content": null,
+                            "role": "assistant",
+                            "cause_by": "QuickThink",
+                            "sent_from": "Alex",
+                            "send_to": [
+                                "<all>"
+                            ],
+                            "metadata": {
+                                "agent": "Alex(Engineer)"
+                            }
                         }
                     ],
                     "index": {
@@ -4354,6 +4749,19 @@
                                     "<all>"
                                 ],
                                 "metadata": {}
+                            },
+                            {
+                                "id": "c09ecbbc9d304bf5bb32ad01b6c481b0",
+                                "content": "[Message] from User to Alex: @Alex  continue with your work",
+                                "instruct_content": null,
+                                "role": "user",
+                                "cause_by": "metagpt.actions.add_requirement.UserRequirement",
+                                "sent_from": "",
+                                "send_to": [
+                                    "Alex",
+                                    "<all>"
+                                ],
+                                "metadata": {}
                             }
                         ],
                         "metagpt.actions.di.run_command.RunCommand": [
@@ -4365,8 +4773,8 @@
                                 "cause_by": "metagpt.actions.di.run_command.RunCommand",
                                 "sent_from": "Mike",
                                 "send_to": [
-                                    "<all>",
-                                    "David"
+                                    "David",
+                                    "<all>"
                                 ],
                                 "metadata": {}
                             },
@@ -4570,6 +4978,22 @@
                                     "agent": "Alex(Engineer)"
                                 }
                             }
+                        ],
+                        "QuickThink": [
+                            {
+                                "id": "997e0ca73b7e41c09bc73e03f7c02411",
+                                "content": "[Message] from Alex(Engineer) to Mike: I'll help you with further improvements to the Deveras RH dashboard. Let me first take a look at the current setup and preview the dashboard:\n\n```json\n[\n    {\n        \"command_name\": \"Terminal.preview\",\n        \"args\": {\n            \"tab_id\": \"01\",\n            \"port\": 8502,\n            \"proj_name\": \"deveras-portfolio-dashboard-dxmig8\"\n        }\n    }\n]\n```",
+                                "instruct_content": null,
+                                "role": "assistant",
+                                "cause_by": "QuickThink",
+                                "sent_from": "Alex",
+                                "send_to": [
+                                    "<all>"
+                                ],
+                                "metadata": {
+                                    "agent": "Alex(Engineer)"
+                                }
+                            }
                         ]
                     },
                     "ignore_id": false,
@@ -4595,8 +5019,8 @@
                             "cause_by": "metagpt.actions.di.run_command.RunCommand",
                             "sent_from": "Mike",
                             "send_to": [
-                                "<all>",
-                                "David"
+                                "David",
+                                "<all>"
                             ],
                             "metadata": {}
                         },
@@ -4969,6 +5393,33 @@
                             "metadata": {
                                 "agent": "Alex(Engineer)"
                             }
+                        },
+                        {
+                            "id": "c09ecbbc9d304bf5bb32ad01b6c481b0",
+                            "content": "[Message] from User to Alex: @Alex  continue with your work",
+                            "instruct_content": null,
+                            "role": "user",
+                            "cause_by": "metagpt.actions.add_requirement.UserRequirement",
+                            "sent_from": "",
+                            "send_to": [
+                                "Alex",
+                                "<all>"
+                            ],
+                            "metadata": {}
+                        },
+                        {
+                            "id": "997e0ca73b7e41c09bc73e03f7c02411",
+                            "content": "[Message] from Alex(Engineer) to Mike: I'll help you with further improvements to the Deveras RH dashboard. Let me first take a look at the current setup and preview the dashboard:\n\n```json\n[\n    {\n        \"command_name\": \"Terminal.preview\",\n        \"args\": {\n            \"tab_id\": \"01\",\n            \"port\": 8502,\n            \"proj_name\": \"deveras-portfolio-dashboard-dxmig8\"\n        }\n    }\n]\n```",
+                            "instruct_content": null,
+                            "role": "assistant",
+                            "cause_by": "QuickThink",
+                            "sent_from": "Alex",
+                            "send_to": [
+                                "<all>"
+                            ],
+                            "metadata": {
+                                "agent": "Alex(Engineer)"
+                            }
                         }
                     ],
                     "memory_k": 30,
@@ -4987,8 +5438,8 @@
                 "max_react_loop": 50
             },
             "addresses": [
-                "David",
-                "metagpt.roles.di.data_analyst.DataAnalyst"
+                "metagpt.roles.di.data_analyst.DataAnalyst",
+                "David"
             ],
             "planner": {
                 "plan": {
@@ -5426,8 +5877,8 @@
                 "cause_by": "metagpt.actions.di.run_command.RunCommand",
                 "sent_from": "Mike",
                 "send_to": [
-                    "<all>",
-                    "David"
+                    "David",
+                    "<all>"
                 ],
                 "metadata": {}
             },
@@ -5439,8 +5890,8 @@
                 "cause_by": "metagpt.actions.di.run_command.RunCommand",
                 "sent_from": "Mike",
                 "send_to": [
-                    "<all>",
-                    "David"
+                    "David",
+                    "<all>"
                 ],
                 "metadata": {}
             },
@@ -5607,6 +6058,60 @@
                 "metadata": {
                     "agent": "Alex(Engineer)"
                 }
+            },
+            {
+                "id": "c09ecbbc9d304bf5bb32ad01b6c481b0",
+                "content": "[Message] from User to Alex: @Alex  continue with your work",
+                "instruct_content": null,
+                "role": "user",
+                "cause_by": "metagpt.actions.add_requirement.UserRequirement",
+                "sent_from": "",
+                "send_to": [
+                    "Alex",
+                    "<all>"
+                ],
+                "metadata": {}
+            },
+            {
+                "id": "c09ecbbc9d304bf5bb32ad01b6c481b0",
+                "content": "@Alex  continue with your work",
+                "instruct_content": null,
+                "role": "user",
+                "cause_by": "metagpt.actions.add_requirement.UserRequirement",
+                "sent_from": "",
+                "send_to": [
+                    "Alex",
+                    "<all>"
+                ],
+                "metadata": {}
+            },
+            {
+                "id": "997e0ca73b7e41c09bc73e03f7c02411",
+                "content": "[Message] from Alex(Engineer) to Mike: I'll help you with further improvements to the Deveras RH dashboard. Let me first take a look at the current setup and preview the dashboard:\n\n```json\n[\n    {\n        \"command_name\": \"Terminal.preview\",\n        \"args\": {\n            \"tab_id\": \"01\",\n            \"port\": 8502,\n            \"proj_name\": \"deveras-portfolio-dashboard-dxmig8\"\n        }\n    }\n]\n```",
+                "instruct_content": null,
+                "role": "assistant",
+                "cause_by": "QuickThink",
+                "sent_from": "Alex",
+                "send_to": [
+                    "<all>"
+                ],
+                "metadata": {
+                    "agent": "Alex(Engineer)"
+                }
+            },
+            {
+                "id": "997e0ca73b7e41c09bc73e03f7c02411",
+                "content": "I'll help you with further improvements to the Deveras RH dashboard. Let me first take a look at the current setup and preview the dashboard:\n\n```json\n[\n    {\n        \"command_name\": \"Terminal.preview\",\n        \"args\": {\n            \"tab_id\": \"01\",\n            \"port\": 8502,\n            \"proj_name\": \"deveras-portfolio-dashboard-dxmig8\"\n        }\n    }\n]\n```",
+                "instruct_content": null,
+                "role": "assistant",
+                "cause_by": "QuickThink",
+                "sent_from": "Alex",
+                "send_to": [
+                    "<all>"
+                ],
+                "metadata": {
+                    "agent": "Alex(Engineer)"
+                }
             }
         ],
         "index": {
@@ -5688,6 +6193,32 @@
                         "<all>"
                     ],
                     "metadata": {}
+                },
+                {
+                    "id": "c09ecbbc9d304bf5bb32ad01b6c481b0",
+                    "content": "[Message] from User to Alex: @Alex  continue with your work",
+                    "instruct_content": null,
+                    "role": "user",
+                    "cause_by": "metagpt.actions.add_requirement.UserRequirement",
+                    "sent_from": "",
+                    "send_to": [
+                        "Alex",
+                        "<all>"
+                    ],
+                    "metadata": {}
+                },
+                {
+                    "id": "c09ecbbc9d304bf5bb32ad01b6c481b0",
+                    "content": "@Alex  continue with your work",
+                    "instruct_content": null,
+                    "role": "user",
+                    "cause_by": "metagpt.actions.add_requirement.UserRequirement",
+                    "sent_from": "",
+                    "send_to": [
+                        "Alex",
+                        "<all>"
+                    ],
+                    "metadata": {}
                 }
             ],
             "metagpt.actions.di.run_command.RunCommand": [
@@ -5699,8 +6230,8 @@
                     "cause_by": "metagpt.actions.di.run_command.RunCommand",
                     "sent_from": "Mike",
                     "send_to": [
-                        "<all>",
-                        "David"
+                        "David",
+                        "<all>"
                     ],
                     "metadata": {}
                 },
@@ -5712,8 +6243,8 @@
                     "cause_by": "metagpt.actions.di.run_command.RunCommand",
                     "sent_from": "Mike",
                     "send_to": [
-                        "<all>",
-                        "David"
+                        "David",
+                        "<all>"
                     ],
                     "metadata": {}
                 },
@@ -5821,6 +6352,36 @@
                     "instruct_content": null,
                     "role": "assistant",
                     "cause_by": "metagpt.actions.di.run_command.RunCommand",
+                    "sent_from": "Alex",
+                    "send_to": [
+                        "<all>"
+                    ],
+                    "metadata": {
+                        "agent": "Alex(Engineer)"
+                    }
+                }
+            ],
+            "QuickThink": [
+                {
+                    "id": "997e0ca73b7e41c09bc73e03f7c02411",
+                    "content": "[Message] from Alex(Engineer) to Mike: I'll help you with further improvements to the Deveras RH dashboard. Let me first take a look at the current setup and preview the dashboard:\n\n```json\n[\n    {\n        \"command_name\": \"Terminal.preview\",\n        \"args\": {\n            \"tab_id\": \"01\",\n            \"port\": 8502,\n            \"proj_name\": \"deveras-portfolio-dashboard-dxmig8\"\n        }\n    }\n]\n```",
+                    "instruct_content": null,
+                    "role": "assistant",
+                    "cause_by": "QuickThink",
+                    "sent_from": "Alex",
+                    "send_to": [
+                        "<all>"
+                    ],
+                    "metadata": {
+                        "agent": "Alex(Engineer)"
+                    }
+                },
+                {
+                    "id": "997e0ca73b7e41c09bc73e03f7c02411",
+                    "content": "I'll help you with further improvements to the Deveras RH dashboard. Let me first take a look at the current setup and preview the dashboard:\n\n```json\n[\n    {\n        \"command_name\": \"Terminal.preview\",\n        \"args\": {\n            \"tab_id\": \"01\",\n            \"port\": 8502,\n            \"proj_name\": \"deveras-portfolio-dashboard-dxmig8\"\n        }\n    }\n]\n```",
+                    "instruct_content": null,
+                    "role": "assistant",
+                    "cause_by": "QuickThink",
                     "sent_from": "Alex",
                     "send_to": [
                         "<all>"

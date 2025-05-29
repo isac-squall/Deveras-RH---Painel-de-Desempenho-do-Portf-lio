@@ -70,7 +70,7 @@
     "18": 1,
     "20": 0,
     "21": 1,
-    "22": 0,
+    "22": 1,
     "23": 1,
     "24": 0,
     "25": 1
@@ -83,8 +83,15 @@
       "server": "0ea1f95c-d245-4da8-a6d3-32cde447cf31",
       "cmd": "cd /data/chats/igk4wd/workspace/streamlit_template && pip install -r requirements.txt && streamlit run app.py --server.port=8502",
       "timeline_index": 24,
-      "status": "success",
-      "logs": []
+      "status": "initializing",
+      "logs": [
+        "\n",
+        "Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.\n",
+        "\n",
+        "\n",
+        "  You can now view your Streamlit app in your browser.\n",
+        "\n"
+      ]
     }
   },
   "deploy": {
