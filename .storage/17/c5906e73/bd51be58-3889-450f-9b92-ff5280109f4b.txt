@@ -1,0 +1,20 @@
+$ cd /data/chats/igk4wd/workspace/../workspace/streamlit_template && ls
+app.py
+requirements.txt
+template_config.json
+$ ls -la /data/chats/igk4wd/workspace/visualizations/ 2>/dev/null || echo 'Directory not found'
+
+total 12072
+drwxr-xr-x 11 root root 1941504 May 25 12:18 .
+drwxr-xr-x 82 root root 8503296 May 25 12:20 ..
+-rw-r--r--  1 root root  271046 May 25 12:18 avg_contract_by_unit.png
+-rw-r--r--  1 root root  249873 May 25 12:18 avg_sessions_by_unit.png
+-rw-r--r--  1 root root  255296 May 25 12:18 contract_count_by_unit.png
+-rw-r--r--  1 root root  292743 May 25 12:18 operator_distribution_by_unit.png
+-rw-r--r--  1 root root    4778 May 25 12:18 portfolio_analysis_report.md
+-rw-r--r--  1 root root    1486 May 25 12:18 portfolio_summary.csv
+-rw-r--r--  1 root root  300877 May 25 12:18 status_distribution_by_unit.png
+-rw-r--r--  1 root root  257456 May 25 12:18 total_portfolio_by_unit.png
+-rw-r--r--  1 root root  281470 May 25 12:18 valor_distribution_by_unit.png
+$ mkdir -p /data/chats/igk4wd/workspace/streamlit_template/assets && cp -r /data/chats/igk4wd/workspace/visualizations/*.png /data/chats/igk4wd/workspace/streamlit_template/assets/ && cp /data/chats/igk4wd/workspace/processed_data.csv /data/chats/igk4wd/workspace/streamlit_template/assets/ && cp /data/chats/igk4wd/workspace/visualizations/portfolio_summary.csv /data/chats/igk4wd/workspace/streamlit_template/assets/
+

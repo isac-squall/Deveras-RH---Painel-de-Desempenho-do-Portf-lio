@@ -1,0 +1,1 @@
+{"tasks": [{"task_id": "1", "dependent_task_ids": [], "instruction": "Examine the Excel file structure and content to understand the data format and identify any initial inconsistencies", "task_type": "eda", "code": "", "result": "", "is_success": false, "is_finished": false, "assignee": "David", "start_at": 1748200192.9464848}], "current_task_id": "1"}

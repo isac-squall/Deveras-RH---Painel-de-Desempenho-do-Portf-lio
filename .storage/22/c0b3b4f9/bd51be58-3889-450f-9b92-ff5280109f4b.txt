@@ -1,0 +1,40 @@
+Restarting the service ...
+
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://100.120.210.208:8501
+  External URL: http://150.107.38.243:8501
+
+2025-05-29 12:29:22.604 Uncaught app execution
+Traceback (most recent call last):
+  File "/opt/conda/envs/mgx-chat/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 3790, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "index.pyx", line 152, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 181, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'UNIDADE OPERADORA'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/conda/envs/mgx-chat/lib/python3.10/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 88, in exec_func_with_error_handling
+    result = func()
+  File "/opt/conda/envs/mgx-chat/lib/python3.10/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 579, in code_to_exec
+    exec(code, module.__dict__)
+  File "/data/chats/igk4wd/workspace/streamlit_template/app.py", line 333, in <module>
+    main()
+  File "/data/chats/igk4wd/workspace/streamlit_template/app.py", line 310, in main
+    operator_analysis(df)
+  File "/data/chats/igk4wd/workspace/streamlit_template/app.py", line 145, in operator_analysis
+    units = df['UNIDADE OPERADORA'].unique().tolist()
+  File "/opt/conda/envs/mgx-chat/lib/python3.10/site-packages/pandas/core/frame.py", line 3896, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/opt/conda/envs/mgx-chat/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 3797, in get_loc
+    raise KeyError(key) from err
+KeyError: 'UNIDADE OPERADORA'

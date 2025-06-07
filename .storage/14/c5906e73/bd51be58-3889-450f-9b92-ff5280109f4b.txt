@@ -1,0 +1,4 @@
+$ cd /data/chats/igk4wd/workspace/../workspace/streamlit_template && ls
+app.py
+requirements.txt
+template_config.json
