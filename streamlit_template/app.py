@@ -57,10 +57,13 @@ def display_metrics(df, summary):
 # Function to create unit performance visualization
 def unit_performance(summary):
     st.subheader("Operating Unit Performance")
-    
+    if summary is None or summary.empty:
+        st.warning("Nenhum dado de unidade disponível.")
+        return
+
     # Sort by total value
     sorted_summary = summary.sort_values(by='total_value', ascending=False)
-    
+
     # Create bar chart for total values
     fig = px.bar(
         sorted_summary,
@@ -74,169 +77,177 @@ def unit_performance(summary):
     )
     fig.update_layout(height=500)
     st.plotly_chart(fig, use_container_width=True)
-    
+
     # Create metrics for top units
     st.subheader("Top Operating Units")
     cols = st.columns(3)
-    
+
     # Display top 3 units
     for i, (idx, row) in enumerate(sorted_summary.head(3).iterrows()):
         if i < len(cols):
-            cols[i].metric(
-                f"{idx}", 
-                f"R$ {row['total_value']:,.2f}", 
-                f"{row['n_valid_contracts']} contracts"
-            )
-            cols[i].caption(f"Avg: R$ {row['avg_value']:,.2f} | Top Operator: {row['top_operator']}")
+            col_metric = f"R$ {row['total_value']:,.2f}" if 'total_value' in row else "N/A"
+            col_contracts = f"{row['n_valid_contracts']} contracts" if 'n_valid_contracts' in row else "N/A"
+            cols[i].metric(f"{idx}", col_metric, col_contracts)
+            # Só mostra avg_value/top_operator se existirem
+            avg_value = f"Avg: R$ {row['avg_value']:,.2f}" if 'avg_value' in row else ""
+            top_operator = f"Top Operator: {row['top_operator']}" if 'top_operator' in row else ""
+            if avg_value or top_operator:
+                cols[i].caption(f"{avg_value} | {top_operator}")
 
 # Function to analyze contract status
 def status_analysis(df, summary):
     st.subheader("Contract Status Analysis")
-    
+    if df is None or df.empty or summary is None or summary.empty:
+        st.warning("Dados insuficientes para análise de status.")
+        return
+
     # Filter for units with data
     valid_units = summary[summary['n_valid_contracts'] > 0].index.tolist()
-    
-    # Create columns for filters and chart
     col1, col2 = st.columns([1, 3])
-    
+
     with col1:
-        # Create unit filter
         selected_unit = st.selectbox(
             "Select Operating Unit",
             options=["ALL"] + valid_units
         )
-        
-        # Filter data based on selection
         if selected_unit != "ALL":
-            filtered_df = df[df['UNIDADE OPERADORA'] == selected_unit]
+            if 'UNIDADE OPERADORA' in df.columns:
+                filtered_df = df[df['UNIDADE OPERADORA'] == selected_unit]
+            else:
+                st.error("Coluna 'UNIDADE OPERADORA' não encontrada nos dados.")
+                return
         else:
             filtered_df = df
-        
-        # Count contracts by status
+
+        if 'STATUS' not in filtered_df.columns:
+            st.error("Coluna 'STATUS' não encontrada nos dados.")
+            return
+
         status_counts = filtered_df['STATUS'].value_counts().reset_index()
         status_counts.columns = ['STATUS', 'Count']
-        
-        # Display metrics
         total = status_counts['Count'].sum()
         st.metric("Total Contracts", f"{total:,}")
-        
-        # Show top statuses
+
         st.subheader("Top Statuses")
         for i, row in status_counts.head(5).iterrows():
             st.caption(f"{row['STATUS']}: {row['Count']:,} ({row['Count']/total*100:.1f}%)")
-    
+
     with col2:
-        # Create pie chart for status distribution
-        fig = px.pie(
-            status_counts.head(10), 
-            values='Count', 
-            names='STATUS',
-            title=f"Status Distribution for {selected_unit if selected_unit != 'ALL' else 'All Units'}" 
-        )
-        fig.update_traces(textposition='inside', textinfo='percent+label')
-        fig.update_layout(height=400)
-        st.plotly_chart(fig, use_container_width=True)
+        if not status_counts.empty:
+            fig = px.pie(
+                status_counts.head(10),
+                values='Count',
+                names='STATUS',
+                title=f"Status Distribution for {selected_unit if selected_unit != 'ALL' else 'All Units'}"
+            )
+            fig.update_traces(textposition='inside', textinfo='percent+label')
+            fig.update_layout(height=400)
+            st.plotly_chart(fig, use_container_width=True)
+        else:
+            st.info("Nenhum status encontrado para a seleção.")
 
 # Function to analyze operators
 def operator_analysis(df):
     st.subheader("Insurance Operator Analysis")
-    
-    # Get units and operators
+    if df is None or df.empty:
+        st.warning("Dados insuficientes para análise de operadoras.")
+        return
+
+    if 'UNIDADE OPERADORA' not in df.columns or 'NF' not in df.columns:
+        st.error("Colunas necessárias ('UNIDADE OPERADORA' ou 'NF') não encontradas nos dados.")
+        return
+
     units = df['UNIDADE OPERADORA'].unique().tolist()
-    operators = df['CONTRATO ASSINADO'].unique().tolist()
-    
-    # Create columns for filters and chart
     col1, col2 = st.columns([1, 3])
-    
+
     with col1:
-        # Create unit filter
         selected_unit = st.selectbox(
             "Select Operating Unit",
             options=["ALL"] + units,
             key="operator_unit_filter"
         )
-        
-        # Filter data based on selection
         if selected_unit != "ALL":
             filtered_df = df[df['UNIDADE OPERADORA'] == selected_unit]
         else:
             filtered_df = df
-            
-        # Count contracts by operator
+
         operator_counts = filtered_df['NF'].value_counts().reset_index()
         operator_counts.columns = ['Operator', 'Count']
-        
-        # Display metrics
         total = operator_counts['Count'].sum()
         st.metric("Total Contracts", f"{total:,}")
-        
-        # Show top operators
+
         st.subheader("Top Operators")
         for i, row in operator_counts.head(5).iterrows():
             st.caption(f"{row['Operator']}: {row['Count']:,} ({row['Count']/total*100:.1f}%)")
-    
+
     with col2:
-        # Create bar chart for operator distribution
-        fig = px.bar(
-            operator_counts.head(10),
-            x='Operator',
-            y='Count',
-            title=f"Top 10 Operators for {selected_unit if selected_unit != 'ALL' else 'All Units'}",
-            color='Count',
-            color_continuous_scale='Viridis'
-        )
-        fig.update_layout(height=400)
-        st.plotly_chart(fig, use_container_width=True)
+        if not operator_counts.empty:
+            fig = px.bar(
+                operator_counts.head(10),
+                x='Operator',
+                y='Count',
+                title=f"Top 10 Operators for {selected_unit if selected_unit != 'ALL' else 'All Units'}",
+                color='Count',
+                color_continuous_scale='Viridis'
+            )
+            fig.update_layout(height=400)
+            st.plotly_chart(fig, use_container_width=True)
+        else:
+            st.info("Nenhum operador encontrado para a seleção.")
 
 # Function to analyze contract values
 def value_analysis(df, summary):
     st.subheader("Contract Value Analysis")
-    
-    # Filter for units with data
+    if df is None or df.empty or summary is None or summary.empty:
+        st.warning("Dados insuficientes para análise de valores.")
+        return
+
+    if 'UNIDADE OPERADORA' not in df.columns or 'VALOR' not in df.columns:
+        st.error("Colunas necessárias ('UNIDADE OPERADORA' ou 'VALOR') não encontradas nos dados.")
+        return
+
     valid_units = summary[summary['n_valid_contracts'] > 0].index.tolist()
-    
-    # Create columns for filters and chart
     col1, col2 = st.columns([1, 3])
-    
+
     with col1:
-        # Create unit filter
         selected_unit = st.selectbox(
             "Select Operating Unit",
             options=["ALL"] + valid_units,
             key="value_unit_filter"
         )
-        
-        # Filter data based on selection
         if selected_unit != "ALL":
             filtered_df = df[df['UNIDADE OPERADORA'] == selected_unit]
         else:
             filtered_df = df
-            
-        # Filter for valid values
+
         filtered_df = filtered_df[filtered_df['VALOR'].notna() & (filtered_df['VALOR'] > 0)]
-        
-        # Calculate metrics
+
+        if filtered_df.empty:
+            st.info("Nenhum contrato válido encontrado para a seleção.")
+            return
+
         total_value = filtered_df['VALOR'].sum()
         avg_value = filtered_df['VALOR'].mean()
         min_value = filtered_df['VALOR'].min()
         max_value = filtered_df['VALOR'].max()
-        
-        # Display metrics
+
         st.metric("Total Value", f"R$ {total_value:,.2f}")
         st.metric("Average Value", f"R$ {avg_value:,.2f}")
         st.metric("Min Value", f"R$ {min_value:,.2f}")
         st.metric("Max Value", f"R$ {max_value:,.2f}")
-    
+
     with col2:
-        # Create histogram for value distribution
-        fig = px.histogram(
-            filtered_df,
-            x='VALOR',
-            nbins=20,
-            title=f"Contract Value Distribution for {selected_unit if selected_unit != 'ALL' else 'All Units'}" 
-        )
-        fig.update_layout(height=400)
-        st.plotly_chart(fig, use_container_width=True)
+        if not filtered_df.empty:
+            fig = px.histogram(
+                filtered_df,
+                x='VALOR',
+                nbins=20,
+                title=f"Contract Value Distribution for {selected_unit if selected_unit != 'ALL' else 'All Units'}"
+            )
+            fig.update_layout(height=400)
+            st.plotly_chart(fig, use_container_width=True)
+        else:
+            st.info("Nenhum valor para exibir no histograma.")
 
 # Function to display pre-generated visualizations
 def show_visualizations():
